@@ -1,4 +1,4 @@
-χfrom flask import Flask,request, render_template, Blueprint
+from flask import Flask,request, render_template, Blueprint
 from spark_engine import SparkEngine
 main = Blueprint('main', __name__)
 
