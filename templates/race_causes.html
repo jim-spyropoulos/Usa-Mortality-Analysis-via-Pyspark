@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="en"><head>   <meta charset="utf-8" />   <title>Chart.js </title>      <!-- import plugin script -->   <script src='static/Chart.js'></script>   </head><body>
+<h1>Top 5 death causes</h1><!-- bar chart canvas element --><canvas id="chart" width="50" height="25"></canvas>
+<script>
+
+   var popCanvas = document.getElementById("chart").getContext("2d");
+
+   var chartOptions = {
+      legend:{
+        display:false
+      },
+      scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+      }
+   };
+ 
+   var barChart = new Chart(popCanvas, {
+  type: 'bar',
+  data: {
+    labels : [{% for item in labels %}
+                  "{{item}}",
+              {% endfor %}],
+    datasets: [{
+      label: 'Score',
+      data : [{% for item in values %}
+                      {{item}},
+                    {% endfor %}],
+      backgroundColor: [
+        'rgba(255, 99, 132, 0.6)',
+        'rgba(54, 162, 235, 0.6)',
+        'rgba(255, 206, 86, 0.6)',
+        'rgba(75, 192, 192, 0.6)',
+        'rgba(153, 102, 255, 0.6)',
+        'rgba(255, 159, 64, 0.6)'
+      ]
+    }]
+  }, options: chartOptions
+
+});
+</script>
+</body></html>

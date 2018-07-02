@@ -1,0 +1,62 @@
+ <!DOCTYPE html>
+ <head>
+ 	<title>USA Mortality Analyzer 2</title>
+ </head>
+ <body>
+ 	{% if choice == "life_expectancy"%}
+      <h1> Life Expectancy Search. Please select the year range you want to search: (2005-2015) </h1>
+      <form action = "http://localhost:5432/life_expectance" method = "POST">
+      	From : <br>
+      	<input type="text" name="from_year" >  <br>
+      	To : <br>
+      	<input type="text" name="to_year"  > <br>
+        <input type="submit" value="Submit"><br><br>
+      </form>
+
+    {% elif choice == "guns_vehicles" %}
+      <h1>Guns vs Vehicles Search. Please select the year range you want to search: (2005-2015)</h1>
+      <form action = "http://localhost:5432/GunsVSvehicles" method = "POST">
+      	From : <br>
+      	<input type="text" name="from_year" >  <br>
+      	To : <br>
+      	<input type="text" name="to_year"  > <br>
+        <input type="submit" value="Submit"><br><br>
+      </form>
+    {% elif choice == "death_causes" %}
+            <h1> Death Causes Search. Please select the year range(2005-2015) and the number of top causes you want to search.</h1>
+      <form action = "http://localhost:5432/death_causes" method = "POST">
+        Year : <br>
+        <input type="text" name="year" >  <br>
+        Top Causes : <br>
+        <input type="text" name="causes"  > <br>
+        <input type="submit" value="Submit"><br><br>
+      </form>
+    {% elif choice == "race_deaths" %}
+      <h1>Top 5 Race Death Causes Search. Please select the race and the year range(2005-2015) you want to search.</h1>
+	<form action = "http://localhost:5432/race_causes" method = "POST">
+	Race : <br>
+	  <input type="radio" name="r" value="18" checked>Asian Indian<br>
+	  <input type="radio" name="r" value="28"> Korean<br>
+  	  <input type="radio" name="r" value="38"> Samoan<br>
+  	  <input type="radio" name="r" value="48"> Vietnamese<br>
+	  <input type="radio" name="r" value="58"> Guamanian<br>
+	  <input type="radio" name="r" value="68"> Other Asian or Pacific Islander in areas<br>
+  	  <input type="radio" name="r" value="78"> Combined other Asian or Pacific Islander<br>
+  	  <input type="radio" name="r" value="01"> White<br>
+	  <input type="radio" name="r" value="02"> Black<br>
+	  <input type="radio" name="r" value="03"> American Indian<br>
+  	  <input type="radio" name="r" value="04"> Chinese<br>
+  	  <input type="radio" name="r" value="05"> Japanese<br>
+	  <input type="radio" name="r" value="06"> Hawaiian<br>
+	  <input type="radio" name="r" value="07"> Filipino<br>
+  	  <input type="radio" name="r" value="00"> Other races<br>
+  	  <input type="radio" name="r" value="08"> Other Asian or Pacific Islander<br>
+	From : <br>
+      	  <input type="text" name="from_year" >  <br>
+      	To : <br>
+      	  <input type="text" name="to_year"  > <br>
+  	  <input type="submit" value="Submit"><br><br>
+      {% endif %}
+	
+</body>
+</html> 

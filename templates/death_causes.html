@@ -1,0 +1,19 @@
+ <!DOCTYPE html>
+ <head>
+ 	<title>Death Causes for Year {{ year }}</title>
+ </head>
+ <body>
+ 	<p><b> Top {{ causes_no }} death causes for {{ year }}.</b></p><br><br><br>
+ 	<table border = 1>
+	{% for elem in causes%}
+  		 <tr>
+	        <th> {{ elem[0] }} </th>
+	        <td> {{ elem[1] }} </td>
+  		 </tr>
+	{% endfor %}
+</table>
+
+
+
+</body>
+</html> 

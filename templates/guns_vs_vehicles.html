@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="en"><head>   <meta charset="utf-8" />   <title>Chart.js </title>      <!-- import plugin script -->   <script src='static/Chart.js'></script>   </head><body>
+<h1>Guns vs Vehicles</h1><!-- bar chart canvas element --><canvas id="chart" width="300" height="150"></canvas>
+<script>
+
+var densityCanvas = document.getElementById("chart").getContext("2d");
+
+var gunsData = {
+  label: 'Guns',
+  data : [{% for item in valuesF %}
+                      {{item}},
+                    {% endfor %}],
+  backgroundColor: 'rgba(0, 99, 132, 0.6)',
+  borderColor: 'rgba(0, 99, 132, 1)'
+};
+ 
+var vehiclesData = {
+  label: 'Vehicles',
+  data : [{% for item in valuesV %}
+                      {{item}},
+                    {% endfor %}],
+  backgroundColor: 'rgba(132, 0, 0, 0.6)',
+  borderColor: 'rgba(132, 0, 0, 1)'
+};
+ 
+var yearsData = {
+  labels : [{% for item in labels %}
+                  "{{item}}",
+              {% endfor %}],
+  datasets: [gunsData, vehiclesData]
+};
+ 
+var chartOptions = {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    }
+};
+ 
+var barChart = new Chart(densityCanvas, {
+  type: 'bar',
+  data: yearsData,
+  options: chartOptions
+});
+ 
+</script>
+</body></html>

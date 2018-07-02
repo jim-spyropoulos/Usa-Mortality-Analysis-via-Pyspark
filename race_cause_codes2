@@ -1,0 +1,42 @@
+01:Tuberculosis
+02:Syphilis
+03:HIV
+04:Cancer(All types)
+05:Cancer of stomach
+06:Cancer of colon
+07:Cancer of pancreas
+08:Cancer of trachea
+09:Cancer of breast
+10:Cancer of cervix uteri
+11:Cancer of prostate
+12:Cancer of urinary tract
+13:Non-Hodgkin's lymphoma
+14:Leukemia
+15:Other malignant neoplasms
+16:Diabetes mellitus
+17:Alzheimer's disease
+18:Cardiovascular diseases
+19:Diseases of heart(All types)
+20:Hypertensive heart disease
+21:Ischemic heart diseases
+22:Diseases of heart(not Ischemic)
+23:Essential hypertension
+24:Cerebrovascular diseases
+25:Atherosclerosis
+26:Diseases of circulatory
+27:Influenza and pneumonia
+28:Chronic respiratory disease
+29:Peptic ulcer
+30:Chronic liver disease
+31:Nephritis and nephrosis
+32:Pregnancy, childbirth
+33:Conditions in perinatal
+34:Congenital malformations
+35:Sudden infant death syndrome
+36:Abnormal clinical findings
+37:All other not ordinary diseases
+38:Motor vehicle accidents
+39:Unspecified accidents
+40:Suicide
+41:Assault (homicide)
+42:All other external causes
