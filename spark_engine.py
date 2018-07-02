@@ -250,7 +250,7 @@ class SparkEngine:
 
    	  for year in range(2005, 2016):
    	  	logger.info("Reading and adding DataFrame for year "+str(year))
-   	  	df = self.sc.read.option("header", True).csv("/media/hazafeir/6C68416568412F60/Users/Charisios/Documents/Linux_dataset/mortality/"+str(year)+"_data.csv").cache()
+   	  	df = self.sc.read.option("header", True).csv("<path_to_dataset_file/"+str(year)+"_data.csv").cache()
    	  	self.df_list.append(df)
    	  	self.years.append(year)
 
